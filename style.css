@@ -76,7 +76,6 @@ span {
 
 .navlist {
     display: flex;
-
 }
 
 .navlist a {
@@ -349,7 +348,7 @@ section {
 }
 
 .about .img-about img {
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     border-radius: 28% 55% 90% 40% / 69% 76% 45% 90%;
     background: #12f7ff;
@@ -801,14 +800,14 @@ footer a i {
 
 .scroll-scale {
     opacity: 0;
-    transform: scale(.9);
-    transition: all 2s;
+    transform: scale(0.95);
+    transition: all 1.5s ease-in-out;
 }
 
 .scroll-bottom {
     opacity: 0;
-    transform: translateY(300px);
-    transition: 3s;
+    transform: translateY(100px);
+    transition: 1.5s ease-in-out;
 }
 
 .scroll-top {
@@ -900,10 +899,11 @@ footer a i {
 
 /* Break Points ---------------------------------------*/
 
-@media(max-width: 991px){
+@media(max-width: 1065px){
     header,
     header.sticky {
-        padding: 15px 5%;
+        padding: 10px 5%;
+        width: 100vw;
     }
 
     footer{
@@ -935,11 +935,17 @@ footer a i {
     .social-icons {
         margin-top: 2rem;
     }
+    
+    .about .img-about .img {
+        max-width: 300px;
+        height: auto;
+    }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 769px) {
     #menu-icon {
-        display: block;
+        margin-left: 0;
+        display: inline;
         transition: all .4s ease
     }
 
@@ -972,15 +978,20 @@ footer a i {
 
     .home {
         grid-template-columns: 1fr;
+        height: auto;
     }
 
     .home-image {
         margin-bottom: 5rem;
     }
 
+    .image-box img {
+        max-width: 320px;
+    }
+
     .liquid-shape {
-        width: 80%;
-        left: 10%;
+        width: 85%;
+        left: 7%;
         top: 13%;
     }
 
@@ -1003,13 +1014,33 @@ footer a i {
 }
 
 
-@media(max-width: 426px) {
+@media(max-width: 500px) {
     html {
         font-size: 80%;
     }
 
+    /* section {
+        padding: 30px 3.5%;
+    } */
+
+    .home-content h1 {
+        font-size: calc(0.9*var(--big-font));
+    }
+
+    .home-content .change-text {
+        font-size: 1.2rem;
+    }
+
+    .home-content p {
+        max-width: 90%;
+    }
+
     footer p {
         font-size: .6rem;
+    }
+
+    .image-box img {
+        max-width: 250px;
     }
 
     .filter-buttons .button {
